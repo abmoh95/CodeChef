@@ -4,21 +4,16 @@
 
 int main(void)
 {   
-    int x = 0;
-    float y = 0;
+    int x;
+    float y;
     scanf("%d %f", &x, &y);
-    if (x > 0 && x <= 2000 && y >= 0 && y <= 2000)
-    {
-        if (x % 5 == 0 && x < y)
+        if (x % 5 == 0 && x <= (y-0.5))
         {
             y = y - x - 0.5;
-            printf("%.2f", y);
-            return 0;
-        }
-        else
-            printf("%.2f", y);
-            return 0;
-    }
-    else  y=0; printf("%.2f", y);
+            printf("%f", y);
+        }  
+    
+    else  printf("%f", y); 
+
     return 0;
 }
